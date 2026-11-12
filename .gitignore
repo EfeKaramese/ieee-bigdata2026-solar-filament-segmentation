@@ -1,0 +1,11 @@
+work/
+cache/
+oof/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.npy
+kaggle.json
+*.zip
+*.tar
+submission_*.csv

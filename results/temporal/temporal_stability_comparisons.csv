@@ -1,0 +1,7 @@
+comparison,frames,d_self_pq,ci95
+demet_tc - baseline,clean,0.06703957251558434,"[+0.0572, +0.0768]"
+demet_tc - baseline,with cloudy,0.08186406156465831,"[+0.0599, +0.0987]"
+tekkare - baseline,clean,-0.0026971792172238995,"[-0.0093, +0.0038]"
+tekkare - baseline,with cloudy,-0.009579775538387847,"[-0.0280, +0.0047]"
+demet_tc - tekkare,clean,0.06973675173280824,"[+0.0592, +0.0798]"
+demet_tc - tekkare,with cloudy,0.09144383710304615,"[+0.0750, +0.1049]"

@@ -1,0 +1,170 @@
+{
+ "train": true,
+ "oof": {
+  "all_components": {
+   "PQ": 0.40927856034229987,
+   "SQ": 0.674792694392308,
+   "RQ": 0.6065248834842235,
+   "TP": 5661,
+   "FP": 4807,
+   "FN": 2538
+  },
+  "scorer": {
+   "PQ": 0.44198232592962033,
+   "SQ": 0.678700414783142,
+   "RQ": 0.6512185882055815,
+   "TP": 5157,
+   "FP": 2482,
+   "FN": 3042
+  },
+  "tau": 0.22499999999999998,
+  "per_fold": {
+   "0": 0.4371805718249313,
+   "1": 0.44260884165205394,
+   "2": 0.44334183472117383,
+   "3": 0.44458856596635593
+  },
+  "scorer_vs_all": {
+   "diff": 0.032703765587320466,
+   "lo": 0.02830945688033943,
+   "hi": 0.03697347111497916,
+   "p_better": 1.0
+  },
+  "official_pq": 0.44198232620469036,
+  "overlap": {
+   "pairs": 6757,
+   "iou_mean": 0.5939292964033879,
+   "iou_median": 0.6427444815635681,
+   "iou_above_05": 0.7632085244931183,
+   "dice_mean": 0.7261106573374394,
+   "dice_median": 0.7825251817703247,
+   "gt_one_to_n": {
+    "0": 1697,
+    "1": 6273,
+    "2": 203,
+    "3": 26
+   },
+   "pred_n_to_one": {
+    "0": 1083,
+    "1": 6363,
+    "2": 182,
+    "3": 10
+   }
+  }
+ },
+ "test": {
+  "rows": 1080,
+  "images": 180,
+  "missing_images": 0,
+  "per_image": 6.0,
+  "sizes": [
+   "2048x2048"
+  ]
+ },
+ "versions": {
+  "python": "3.13.16",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "torch": "2.11.0+cu130",
+  "timm": "1.0.30",
+  "numpy": "2.1.3",
+  "scipy": "1.16.3",
+  "pandas": "2.2.3",
+  "scikit_learn": "1.6.1",
+  "scikit_image": "0.25.2",
+  "opencv": "5.0.0.93",
+  "pycocotools": "2.0.11",
+  "pyyaml": "6.0.3",
+  "matplotlib": "3.10.0"
+ },
+ "config": {
+  "seed": 42,
+  "data": {
+   "full": 2048,
+   "input_res": 2048,
+   "crop": 1024,
+   "crops_per_image": 2,
+   "filament_centered": 0.5,
+   "n_folds": 4,
+   "target": "mean",
+   "union_weight_floor": 0.5,
+   "spine_px": 5
+  },
+  "preprocess": {
+   "disk_radius_prior": 0.44189453125,
+   "disk_radius_tol": 0.03,
+   "flat_bins": 64,
+   "flat_clip": [
+    0.75,
+    1.25
+   ],
+   "blur_sigma": 0.7,
+   "clahe_clip": 2.5,
+   "clahe_tile": 8
+  },
+  "augment": {
+   "rotate_deg": 45,
+   "scale": [
+    0.75,
+    1.0
+   ],
+   "gamma": [
+    0.5,
+    1.5
+   ],
+   "p_affine": 0.9,
+   "p_gamma": 0.9
+  },
+  "model": {
+   "encoder": "convnext_tiny.fb_in22k_ft_in1k",
+   "encoder_out_norm": true,
+   "aspp_rates": [
+    6,
+    12,
+    18
+   ],
+   "scse_kernel": 15
+  },
+  "train": {
+   "epochs": 40,
+   "batch_size": 2,
+   "lr": 0.0003,
+   "encoder_lr_mult": 0.5,
+   "weight_decay": 0.0001,
+   "pct_start": 0.15,
+   "grad_clip": 1.0,
+   "val_every": 5,
+   "val_stride": 2,
+   "workers": 2,
+   "nan_patience": 10
+  },
+  "loss": {
+   "w_bce": 1.0,
+   "w_dice": 1.0,
+   "w_cldice": 0.5,
+   "cldice_iters": 10,
+   "cldice_ramp": [
+    4,
+    9
+   ],
+   "w_spine": 0.2
+  },
+  "postprocess": {
+   "t_lo": 0.4,
+   "t_hi": 0.7,
+   "close": 6,
+   "min_area": 80
+  },
+  "scorer": {
+   "max_iter": 300,
+   "learning_rate": 0.05,
+   "max_leaf_nodes": 31,
+   "l2_regularization": 1.0,
+   "station_feature": false,
+   "tau_grid": [
+    0.05,
+    0.61,
+    0.0125
+   ]
+  }
+ }
+}

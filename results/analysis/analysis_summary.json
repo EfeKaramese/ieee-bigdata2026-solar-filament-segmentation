@@ -1,0 +1,39 @@
+{
+ "baseline": {
+  "PQ": 0.44198232592962033,
+  "SQ": 0.678700414783142,
+  "RQ": 0.6512185882055815,
+  "TP": 5157,
+  "FP": 2482,
+  "FN": 3042
+ },
+ "tau": 0.22499999999999998,
+ "size_edges": [
+  670.0,
+  1228.0,
+  2438.0
+ ],
+ "challenge1": {
+  "pairs": 5157,
+  "complexity_ratio_median": 0.7226414266449013,
+  "spearman_complexity": 0.8375620980055019,
+  "spearman_endpoints": 0.46584235880035907,
+  "endpoints_gt_median": 5.0,
+  "endpoints_pred_median": 3.0,
+  "share_pred_simpler": 0.8644560791157649
+ },
+ "challenge2": {
+  "fn_total": 3042,
+  "fn_multi_record": 1749,
+  "fn_drawn_by_one_annotator_only": 0.6923956546598056,
+  "scorer_ece": 0.017768453205927327,
+  "tau_theory": 0.22099116296481017
+ },
+ "challenge3": {
+  "gt_fragmented": 229,
+  "pred_merged": 192,
+  "merge_oracle_pq": 0.4541646549132617,
+  "merge_oracle_gain": 0.012182328983641355,
+  "merge_oracle_new_matches": 113
+ }
+}

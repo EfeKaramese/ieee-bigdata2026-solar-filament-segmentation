@@ -1,0 +1,4 @@
+category,n,median_area,share
+low_overlap,1787,1361.0,0.5874424720578567
+not_detected,751,590.0,0.24687705456936226
+removed_by_scorer,504,737.0,0.16568047337278108

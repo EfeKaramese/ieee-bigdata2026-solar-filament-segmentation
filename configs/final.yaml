@@ -1,0 +1,73 @@
+# Final configuration (single source of truth for every hyper-parameter).
+# All pixel quantities are in native 2048x2048 pixels unless stated otherwise.
+
+seed: 42
+
+data:
+  full: 2048              # native image size; all evaluation happens here
+  input_res: 2048         # network input resolution: 2048 = crops from the full image (final); 1024 = whole disk downscaled
+  crop: 1024              # training crop size (ignored when input_res == crop)
+  crops_per_image: 2      # training samples drawn per image and epoch
+  filament_centered: 0.5  # share of crops centred on a filament pixel
+  n_folds: 4
+  target: mean            # mean = soft target, average of the annotator masks; union = agreement-weighted union
+  union_weight_floor: 0.5 # union target only: BCE weight inside the union = floor + (1 - floor) * agreement
+  spine_px: 5             # spine line width in the auxiliary target
+
+preprocess:
+  disk_radius_prior: 0.44189453125   # 905 / 2048
+  disk_radius_tol: 0.03
+  flat_bins: 64
+  flat_clip: [0.75, 1.25]
+  blur_sigma: 0.7
+  clahe_clip: 2.5
+  clahe_tile: 8
+
+augment:
+  rotate_deg: 45
+  scale: [0.75, 1.0]
+  gamma: [0.5, 1.5]
+  p_affine: 0.9
+  p_gamma: 0.9
+
+model:
+  encoder: convnext_tiny.fb_in22k_ft_in1k
+  encoder_out_norm: true  # LayerNorm2d on every encoder output (fixes fp16 overflow)
+  aspp_rates: [6, 12, 18]
+  scse_kernel: 15
+
+train:
+  epochs: 40
+  batch_size: 2
+  lr: 3.0e-4
+  encoder_lr_mult: 0.5
+  weight_decay: 1.0e-4
+  pct_start: 0.15
+  grad_clip: 1.0
+  val_every: 5
+  val_stride: 2           # validate on every 2nd validation image at full resolution
+  workers: 2
+  nan_patience: 10        # consecutive non-finite losses before rolling back and running the encoder in fp32
+  init_checkpoint: null   # optional: start from these weights instead of ImageNet (used only for the fine-tuning ablation)
+
+loss:
+  w_bce: 1.0
+  w_dice: 1.0
+  w_cldice: 0.5
+  cldice_iters: 10
+  cldice_ramp: [4, 9]     # clDice weight ramps linearly from 0 (epoch 4) to 1 (epoch 9)
+  w_spine: 0.2
+
+postprocess:
+  t_lo: 0.4
+  t_hi: 0.7
+  close: 6
+  min_area: 80
+
+scorer:
+  max_iter: 300
+  learning_rate: 0.05
+  max_leaf_nodes: 31
+  l2_regularization: 1.0
+  station_feature: false  # never use the observatory letter in the file name
+  tau_grid: [0.05, 0.61, 0.0125]

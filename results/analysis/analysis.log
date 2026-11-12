@@ -1,0 +1,86 @@
+2026-11-03 12:25:08 cache /content/cache: 0 ready, 707 to build
+2026-11-03 12:26:17   100/707 (69s)
+2026-11-03 12:26:56   200/707 (109s)
+2026-11-03 12:27:37   300/707 (150s)
+2026-11-03 12:28:17   400/707 (189s)
+2026-11-03 12:28:59   500/707 (232s)
+2026-11-03 12:29:35   600/707 (267s)
+2026-11-03 12:30:09   700/707 (301s)
+2026-11-03 12:30:11 cache built in 304s
+2026-11-03 12:30:18 baseline OOF PQ 0.4420 (tau 0.2250) — should equal results.json
+2026-11-03 12:30:40   image pass 100/707 (0.4 min)
+2026-11-03 12:31:00   image pass 200/707 (0.7 min)
+2026-11-03 12:31:23   image pass 300/707 (1.1 min)
+2026-11-03 12:31:44   image pass 400/707 (1.4 min)
+2026-11-03 12:32:04   image pass 500/707 (1.8 min)
+2026-11-03 12:32:18   image pass 600/707 (2.0 min)
+2026-11-03 12:32:29   image pass 700/707 (2.2 min)
+2026-11-03 12:32:32 image pass done (2.2 min)
+2026-11-03 12:32:32 3042 misses, 2482 false positives, 5157 matched pairs (per record)
+2026-11-03 12:32:32   size_px      selection     PQ  recall     SQ   TP   FP   FN                scorer_gain
+     <670         scorer 0.3524  0.4905 0.6668 1005  749 1044 +0.0578 [+0.0463, +0.0692]
+     <670 all components 0.2946  0.6003 0.6645 1230 2269  819                        NaN
+ 670–1228         scorer 0.4367  0.6449 0.6707 1322  689  728 +0.0137 [+0.0062, +0.0205]
+ 670–1228 all components 0.4230  0.7044 0.6659 1444 1053  606                        NaN
+1228–2438         scorer 0.4745  0.6873 0.6786 1409  571  641 +0.0116 [+0.0062, +0.0173]
+1228–2438 all components 0.4628  0.7302 0.6756 1497  823  553                        NaN
+    >2438         scorer 0.5006  0.6932 0.6947 1421  473  629 +0.0104 [+0.0055, +0.0154]
+    >2438 all components 0.4902  0.7268 0.6911 1490  662  560                        NaN
+2026-11-03 12:32:33 gt_complexity_q    n  iou_mean  gt_complexity  pred_complexity  gt_ends  pred_ends
+      Q1 simple 1290     0.705          2.011            1.693      3.0        2.0
+             Q2 1289     0.681          3.592            2.643      5.0        2.0
+             Q3 1289     0.670          5.197            3.506      6.0        3.0
+     Q4 complex 1289     0.659          8.369            5.362     10.0        3.0
+2026-11-03 12:32:33 {"pairs": 5157, "complexity_ratio_median": 0.7226414266449013, "spearman_complexity": 0.8375620980055019, "spearman_endpoints": 0.46584235880035907, "endpoints_gt_median": 5.0, "endpoints_pred_median": 3.0, "share_pred_simpler": 0.8644560791157649}
+2026-11-03 12:32:42          category    n  median_area  share
+      low_overlap 1787       1361.0  0.587
+     not_detected  751        590.0  0.247
+removed_by_scorer  504        737.0  0.166
+2026-11-03 12:32:42               category   n  median_area  share
+            background 740        722.0  0.298
+       partial_overlap 871       1407.0  0.351
+tp_for_other_annotator 871       1054.0  0.351
+2026-11-03 12:32:42 {"fn_total": 3042, "fn_multi_record": 1749, "fn_drawn_by_one_annotator_only": 0.6923956546598056}
+2026-11-03 12:32:42                     who  images     PQ     SQ     RQ   TP   FP   FN
+ annotator vs annotator     296 0.3399 0.6337 0.5364 4292 3709 3709
+            model (OOF)     296 0.4427 0.6770 0.6538 3244 1686 1749
+model (OOF), all images     707 0.4420 0.6787 0.6512 5157 2482 3042
+2026-11-03 12:32:56 scorer ECE 0.0178
+                         variant       PQ                   vs_final
+  theoretical tau = PQ/2 = 0.221 0.441898 -0.0001 [-0.0007, +0.0006]
+               tuned tau (0.225) 0.441982                          –
+      no scorer (all components) 0.409279 -0.0327 [-0.0370, -0.0283]
+   19 base features only (0.225) 0.438150 -0.0038 [-0.0066, -0.0012]
++ station letter feature (0.250) 0.442102 +0.0001 [-0.0021, +0.0022]
+2026-11-03 12:32:57 {"gt_fragmented": 229, "pred_merged": 192, "merge_oracle_pq": 0.4541646549132617, "merge_oracle_gain": 0.012182328983641355, "merge_oracle_new_matches": 113}
+2026-11-03 12:34:26   candidates 100/707 (1.5 min)
+2026-11-03 12:35:48   candidates 200/707 (2.8 min)
+2026-11-03 12:37:46   candidates 300/707 (4.8 min)
+2026-11-03 12:39:08   candidates 400/707 (6.2 min)
+2026-11-03 12:40:30   candidates 500/707 (7.6 min)
+2026-11-03 12:41:52   candidates 600/707 (8.9 min)
+2026-11-03 12:43:00   candidates 700/707 (10.1 min)
+2026-11-03 12:43:05 candidates: 6552 components in 707 images (10.1 min)
+2026-11-03 12:44:43   candidates 100/707 (1.5 min)
+2026-11-03 12:46:01   candidates 200/707 (2.8 min)
+2026-11-03 12:47:23   candidates 300/707 (4.2 min)
+2026-11-03 12:48:46   candidates 400/707 (5.6 min)
+2026-11-03 12:50:12   candidates 500/707 (7.0 min)
+2026-11-03 12:51:27   candidates 600/707 (8.3 min)
+2026-11-03 12:52:38   candidates 700/707 (9.5 min)
+2026-11-03 12:52:42 candidates: 6340 components in 707 images (9.5 min)
+2026-11-03 12:52:48  close_radius       PQ                   vs_final  gt_fragmented  pred_merged
+            3 0.444185 +0.0022 [-0.0006, +0.0051]            232          183
+            6 0.441982                          –            229          192
+            9 0.437104 -0.0049 [-0.0079, -0.0017]            248          222
+2026-11-03 12:52:49 saved -> /content/drive/MyDrive/Kaggle/solar_filament/work/final/analysis
+2026-11-10 12:51:51 cache /content/cache: 0 ready, 707 to build
+2026-11-10 12:52:37   100/707 (46s)
+2026-11-10 12:53:29   200/707 (98s)
+2026-11-10 12:54:14   300/707 (143s)
+2026-11-10 12:54:50   400/707 (179s)
+2026-11-10 12:55:28   500/707 (217s)
+2026-11-10 12:56:00   600/707 (249s)
+2026-11-10 12:56:32   700/707 (281s)
+2026-11-10 12:56:36 cache built in 285s
+2026-11-10 12:56:41 baseline OOF PQ 0.4420 (tau 0.2250) — should equal results.json

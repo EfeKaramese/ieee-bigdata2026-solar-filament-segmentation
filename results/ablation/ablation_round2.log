@@ -1,0 +1,99 @@
+2026-11-02 16:50:29 device cuda (Tesla T4) | torch 2.11.0+cu128 | sklearn 1.6.1 | variants ['ref', 'union', 'res1024', 'no_cldice', 'ft20']
+2026-11-02 16:50:33 cache: /kaggle/input/datasets/efekarameseis/ablation-fold0-output/ablation/cache | fold 0: 527 train / 180 validation images
+2026-11-02 16:50:35 [abl_ref_fold0] finished model found in /kaggle/input
+2026-11-02 16:50:35 [abl_ref_fold0] already trained (best val IoU 0.5579)
+2026-11-02 16:50:38 [abl_union_fold0] finished model found in /kaggle/input
+2026-11-02 16:50:38 [abl_union_fold0] already trained (best val IoU 0.5489)
+2026-11-02 16:50:40 [abl_res1024_fold0] finished model found in /kaggle/input
+2026-11-02 16:50:40 [abl_res1024_fold0] already trained (best val IoU 0.5597)
+2026-11-02 16:50:45 [abl_no_cldice_fold0] 527 train / 180 val images, 527 steps/epoch, precision torch.float16
+2026-11-02 16:55:58 [abl_no_cldice_fold0] ep00 loss=1.7565 | 5.2 min
+2026-11-02 17:00:45 [abl_no_cldice_fold0] ep01 loss=1.6284 | 4.8 min
+2026-11-02 17:05:35 [abl_no_cldice_fold0] ep02 loss=1.4605 | 4.8 min
+2026-11-02 17:10:25 [abl_no_cldice_fold0] ep03 loss=1.2378 | 4.8 min
+2026-11-02 17:16:35 [abl_no_cldice_fold0] ep04 loss=1.0253 val_IoU=0.4482 (best 0.4482) | 6.2 min
+2026-11-02 17:21:21 [abl_no_cldice_fold0] ep05 loss=0.7896 | 4.7 min
+2026-11-02 17:26:07 [abl_no_cldice_fold0] ep06 loss=0.5671 | 4.8 min
+2026-11-02 17:30:54 [abl_no_cldice_fold0] ep07 loss=0.4815 | 4.8 min
+2026-11-02 17:35:42 [abl_no_cldice_fold0] ep08 loss=0.4363 | 4.8 min
+2026-11-02 17:41:11 [abl_no_cldice_fold0] ep09 loss=0.4156 val_IoU=0.5287 (best 0.5287) | 5.5 min
+2026-11-02 17:46:00 [abl_no_cldice_fold0] ep10 loss=0.4224 | 4.8 min
+2026-11-02 17:50:49 [abl_no_cldice_fold0] ep11 loss=0.4054 | 4.8 min
+2026-11-02 17:55:37 [abl_no_cldice_fold0] ep12 loss=0.4050 | 4.8 min
+2026-11-02 18:00:25 [abl_no_cldice_fold0] ep13 loss=0.3921 | 4.8 min
+2026-11-02 18:05:55 [abl_no_cldice_fold0] ep14 loss=0.3770 val_IoU=0.5282 (best 0.5287) | 5.5 min
+2026-11-02 18:10:46 [abl_no_cldice_fold0] ep15 loss=0.3699 | 4.8 min
+2026-11-02 18:15:36 [abl_no_cldice_fold0] ep16 loss=0.3662 | 4.8 min
+2026-11-02 18:20:26 [abl_no_cldice_fold0] ep17 loss=0.3616 | 4.8 min
+2026-11-02 18:25:16 [abl_no_cldice_fold0] ep18 loss=0.3634 | 4.8 min
+2026-11-02 18:30:46 [abl_no_cldice_fold0] ep19 loss=0.3467 val_IoU=0.5502 (best 0.5502) | 5.5 min
+2026-11-02 18:35:38 [abl_no_cldice_fold0] ep20 loss=0.3503 | 4.8 min
+2026-11-02 18:40:30 [abl_no_cldice_fold0] ep21 loss=0.3476 | 4.9 min
+2026-11-02 18:45:22 [abl_no_cldice_fold0] ep22 loss=0.3462 | 4.9 min
+2026-11-02 18:50:17 [abl_no_cldice_fold0] ep23 loss=0.3397 | 4.9 min
+2026-11-02 18:55:52 [abl_no_cldice_fold0] ep24 loss=0.3415 val_IoU=0.5545 (best 0.5545) | 5.6 min
+2026-11-02 19:00:46 [abl_no_cldice_fold0] ep25 loss=0.3358 | 4.9 min
+2026-11-02 19:05:39 [abl_no_cldice_fold0] ep26 loss=0.3382 | 4.9 min
+2026-11-02 19:10:31 [abl_no_cldice_fold0] ep27 loss=0.3368 | 4.9 min
+2026-11-02 19:15:24 [abl_no_cldice_fold0] ep28 loss=0.3374 | 4.9 min
+2026-11-02 19:20:59 [abl_no_cldice_fold0] ep29 loss=0.3300 val_IoU=0.5593 (best 0.5593) | 5.6 min
+2026-11-02 19:25:53 [abl_no_cldice_fold0] ep30 loss=0.3267 | 4.9 min
+2026-11-02 19:30:48 [abl_no_cldice_fold0] ep31 loss=0.3160 | 4.9 min
+2026-11-02 19:35:41 [abl_no_cldice_fold0] ep32 loss=0.3144 | 4.9 min
+2026-11-02 19:40:33 [abl_no_cldice_fold0] ep33 loss=0.3227 | 4.9 min
+2026-11-02 19:46:06 [abl_no_cldice_fold0] ep34 loss=0.3225 val_IoU=0.5637 (best 0.5637) | 5.5 min
+2026-11-02 19:50:59 [abl_no_cldice_fold0] ep35 loss=0.3172 | 4.9 min
+2026-11-02 19:55:51 [abl_no_cldice_fold0] ep36 loss=0.3186 | 4.9 min
+2026-11-02 20:00:45 [abl_no_cldice_fold0] ep37 loss=0.3152 | 4.9 min
+2026-11-02 20:05:40 [abl_no_cldice_fold0] ep38 loss=0.3271 | 4.9 min
+2026-11-02 20:11:15 [abl_no_cldice_fold0] ep39 loss=0.3163 val_IoU=0.5619 (best 0.5637) | 5.6 min
+2026-11-02 20:11:19 [abl_ft20_fold0] 527 train / 180 val images, 527 steps/epoch, precision torch.float16
+2026-11-02 20:16:57 [abl_ft20_fold0] ep00 loss=0.4345 | 5.6 min
+2026-11-02 20:22:37 [abl_ft20_fold0] ep01 loss=0.4416 | 5.7 min
+2026-11-02 20:28:17 [abl_ft20_fold0] ep02 loss=0.4317 | 5.7 min
+2026-11-02 20:33:56 [abl_ft20_fold0] ep03 loss=0.4520 | 5.6 min
+2026-11-02 20:40:15 [abl_ft20_fold0] ep04 loss=0.4248 val_IoU=0.5525 (best 0.5525) | 6.3 min
+2026-11-02 20:45:53 [abl_ft20_fold0] ep05 loss=0.4367 | 5.6 min
+2026-11-02 20:51:31 [abl_ft20_fold0] ep06 loss=0.4351 | 5.6 min
+2026-11-02 20:57:10 [abl_ft20_fold0] ep07 loss=0.4327 | 5.6 min
+2026-11-02 21:02:52 [abl_ft20_fold0] ep08 loss=0.4247 | 5.7 min
+2026-11-02 21:09:13 [abl_ft20_fold0] ep09 loss=0.4296 val_IoU=0.5487 (best 0.5525) | 6.3 min
+2026-11-02 21:14:56 [abl_ft20_fold0] ep10 loss=0.4310 | 5.7 min
+2026-11-02 21:20:40 [abl_ft20_fold0] ep11 loss=0.4217 | 5.7 min
+2026-11-02 21:26:23 [abl_ft20_fold0] ep12 loss=0.4175 | 5.7 min
+2026-11-02 21:32:05 [abl_ft20_fold0] ep13 loss=0.4042 | 5.7 min
+2026-11-02 21:38:26 [abl_ft20_fold0] ep14 loss=0.4108 val_IoU=0.5514 (best 0.5525) | 6.3 min
+2026-11-02 21:44:08 [abl_ft20_fold0] ep15 loss=0.4119 | 5.7 min
+2026-11-02 21:49:49 [abl_ft20_fold0] ep16 loss=0.4012 | 5.7 min
+2026-11-02 21:55:29 [abl_ft20_fold0] ep17 loss=0.4131 | 5.7 min
+2026-11-02 22:01:09 [abl_ft20_fold0] ep18 loss=0.4143 | 5.7 min
+2026-11-02 22:07:29 [abl_ft20_fold0] ep19 loss=0.3945 val_IoU=0.5546 (best 0.5546) | 6.3 min
+2026-11-02 22:07:29 status: {'ref': 'done', 'union': 'done', 'res1024': 'done', 'no_cldice': 'done', 'ft20': 'done'} | all variants trained: True
+2026-11-02 22:12:39 OOF fold 0: done (5.2 min)
+2026-11-02 22:14:48   candidates 100/180 (2.1 min)
+2026-11-02 22:16:18 candidates: 1600 components in 180 images (3.6 min)
+2026-11-02 22:20:47 OOF fold 0: done (4.4 min)
+2026-11-02 22:22:56   candidates 100/180 (2.2 min)
+2026-11-02 22:24:27 candidates: 1616 components in 180 images (3.7 min)
+2026-11-02 22:25:47 OOF fold 0: done (1.3 min)
+2026-11-02 22:27:58   candidates 100/180 (2.2 min)
+2026-11-02 22:29:27 candidates: 1491 components in 180 images (3.7 min)
+2026-11-02 22:33:56 OOF fold 0: done (4.4 min)
+2026-11-02 22:36:08   candidates 100/180 (2.2 min)
+2026-11-02 22:37:35 candidates: 1554 components in 180 images (3.7 min)
+2026-11-02 22:42:04 OOF fold 0: done (4.4 min)
+2026-11-02 22:44:15   candidates 100/180 (2.2 min)
+2026-11-02 22:45:46 candidates: 1508 components in 180 images (3.7 min)
+2026-11-02 22:45:51 
+  variant  best_val_iou  pq_all     pq    sq    rq   tp  fp  fn    tau  encoder_fp32
+      ref        0.5579  0.4189 0.4362 0.682 0.640 1271 732 699 0.1625         False
+    union        0.5489  0.4001 0.4187 0.671 0.624 1221 722 749 0.1875         False
+  res1024        0.5597  0.4049 0.4196 0.670 0.626 1193 649 777 0.1875         False
+no_cldice        0.5637  0.4174 0.4406 0.688 0.640 1199 576 771 0.2250         False
+     ft20        0.5546  0.4191 0.4365 0.685 0.637 1190 576 780 0.2250         False
+
+     comparison    d_pq               ci95  d_pq_all           ci95_all  adopt
+    union - ref -0.0176 [-0.0283, -0.0082]   -0.0189 [-0.0281, -0.0101]  False
+  res1024 - ref -0.0166 [-0.0267, -0.0066]   -0.0140 [-0.0238, -0.0046]  False
+no_cldice - ref  0.0044 [-0.0050, +0.0147]   -0.0016 [-0.0094, +0.0061]  False
+     ft20 - ref  0.0002 [-0.0074, +0.0073]    0.0002 [-0.0065, +0.0074]  False
