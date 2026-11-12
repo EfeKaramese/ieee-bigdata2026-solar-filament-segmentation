@@ -88,6 +88,13 @@ environment variable `DATA_DIR`) and run the notebook from the `notebooks/` fold
 - `TRAIN = True` retrains everything from scratch (about 4.7 h on one NVIDIA A100; longer on smaller GPUs). Training
   is resumable: run the notebook again after an interruption.
 
+**Re-running gives the same result up to GPU non-determinism.** The executed `notebooks/pipeline.ipynb` in this
+repository is a clean-environment run with `TRAIN = False` on an NVIDIA L4 (the reported numbers come from the
+original run on an A100). It reaches OOF PQ 0.443 (SQ 0.680, RQ 0.652) instead of 0.442. The probability maps differ
+slightly between GPUs, the cross-fitted scorer is refitted on them and the OOF-tuned threshold moves from 0.225 to
+0.263; because PQ is flat around its optimum, this changes which marginal components are kept but hardly changes PQ.
+The test submission always uses the shipped scorer and threshold (`weights/scorer.pkl`, τ = 0.225).
+
 Mixed precision is chosen automatically (bfloat16 on GPUs with compute capability ≥ 8, float16 otherwise). The pinned
 versions in `requirements.txt` are those of the run that produced `weights/`; `scikit-learn` must match because
 `weights/scorer.pkl` is a pickled model.
