@@ -5,7 +5,7 @@ Solution to the **IEEE BigData Cup 2026, Challenge 02 — Solar Filament Segment
 segmentation of solar filaments in full-disk GONG H-α images (MAGFiLO), scored with Panoptic Quality (PQ) against
 every annotator record.
 
-The 4-page report is in [`report/report.pdf`](report/technical_report.pdf).
+The 4-page report is in [`report/technical_report.pdf`](report/technical_report.pdf).
 
 ## Results
 
